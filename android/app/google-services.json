@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "120397076216",
+    "project_id": "fir-auth-80014",
+    "storage_bucket": "fir-auth-80014.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120397076216:android:b5508f1ca59d9673520d0d",
+        "android_client_info": {
+          "package_name": "com.example.agrobotApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120397076216-nn6ing78ihcm7lq03s0rf91vm71c2ulo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5KW-uR_dtSjHAcrZFeUGlGB70QlkClus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120397076216-nn6ing78ihcm7lq03s0rf91vm71c2ulo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
