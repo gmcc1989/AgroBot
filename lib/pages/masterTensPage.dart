@@ -100,7 +100,14 @@ class _MasterTensPageState extends State<MasterTensPage> {
           final statusBomba = FirebaseDatabase.instance.reference().child(path);
           print(statusBomba.get());
 
-          if (statusBomba.get() == 1) {
+          String teste;
+          statusBomba.once().then((DataSnapshot snapshot) {
+            teste = snapshot.value;
+          });
+
+          //String teste = statusBomba.toString();
+
+          if (teste == "1") {
             statusBomba.set(0);
             print("Bomba desligada");
           } else {
