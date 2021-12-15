@@ -63,10 +63,12 @@ class _LoginPageState extends State<LoginPage> {
         // ignore: unused_local_variable
         UserCredential user = await FirebaseAuth.instance
             .signInWithEmailAndPassword(email: _email, password: _password);
-        Navigator.push(
+        //Navigator.push(
+        Navigator.pushReplacement(
             //context, MaterialPageRoute(builder: (context) => Home()));
             context,
-            MaterialPageRoute(builder: (context) => UserProducts()));
+            MaterialPageRoute(
+                builder: (BuildContext context) => UserProducts()));
       } catch (e) {
         print(e.message);
       }

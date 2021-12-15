@@ -98,22 +98,20 @@ class _MasterTensPageState extends State<MasterTensPage> {
 
           String path = "/AgrobotProducts/CBMaster/Bomba";
           final statusBomba = FirebaseDatabase.instance.reference().child(path);
-          print(statusBomba.get());
 
-          String teste;
+          //print(statusBomba.get());
+
           statusBomba.once().then((DataSnapshot snapshot) {
-            teste = snapshot.value;
+            if (snapshot.value == 1) {
+              statusBomba.set(0);
+              print("Bomba desligada");
+            } else {
+              statusBomba.set(1);
+              print("Bomba ligada");
+            }
           });
 
           //String teste = statusBomba.toString();
-
-          if (teste == "1") {
-            statusBomba.set(0);
-            print("Bomba desligada");
-          } else {
-            statusBomba.set(1);
-            print("Bomba ligada");
-          }
         },
         child: Text("Ligar/Desligar Bomba", style: TextStyle(fontSize: 20)));
     list.add(ligaBomba);
