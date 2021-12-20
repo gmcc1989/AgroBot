@@ -32,6 +32,7 @@ class _LoginPageState extends State<LoginPage> {
               },
               onSaved: (input) => _email = input,
               decoration: InputDecoration(labelText: 'Email'),
+              keyboardType: TextInputType.emailAddress,
             ),
             TextFormField(
               // ignore: missing_return
@@ -43,6 +44,7 @@ class _LoginPageState extends State<LoginPage> {
               onSaved: (input) => _password = input,
               decoration: InputDecoration(labelText: 'Password'),
               obscureText: true,
+              keyboardType: TextInputType.phone,
             ),
             ElevatedButton(
               onPressed: signIn,
