@@ -19,9 +19,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Agrobot Signin',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blueGrey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      debugShowCheckedModeBanner: false,
       home: WelcomePage(),
     );
   }
