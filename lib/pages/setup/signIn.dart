@@ -23,10 +23,9 @@ class _LoginPageState extends State<LoginPage> {
         child: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("images/agro.jpg"),
+                  image: AssetImage("lib/pages/images/agro.jpg"),
                   fit: BoxFit.cover)),
           child: Column(
-            
             children: <Widget>[
               Stack(
                 alignment: Alignment.bottomCenter,
@@ -36,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                         child: Image.asset(
-                          "images/agro.jpg",
+                          lib/pages/images/agro.jpg,
                           width: 130,
                           height: 130,
                           fit: BoxFit.contain,
