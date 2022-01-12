@@ -13,44 +13,119 @@ class _LoginPageState extends State<LoginPage> {
   String _email, _password;
   // ignore: unused_field
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('SignIn'),
-      ),
+      appBar: AppBar(backgroundColor: Colors.transparent),
       body: Form(
         key: _formkey,
-        child: Column(
-          children: <Widget>[
-            TextFormField(
-              // ignore: missing_return
-              validator: (input) {
-                if (input.isEmpty) {
-                  return 'Please type an email';
-                }
-              },
-              onSaved: (input) => _email = input,
-              decoration: InputDecoration(labelText: 'Email'),
-              keyboardType: TextInputType.emailAddress,
-            ),
-            TextFormField(
-              // ignore: missing_return
-              validator: (input) {
-                if (input.isEmpty) {
-                  return 'Please type an password';
-                }
-              },
-              onSaved: (input) => _password = input,
-              decoration: InputDecoration(labelText: 'Password'),
-              obscureText: true,
-              keyboardType: TextInputType.phone,
-            ),
-            ElevatedButton(
-              onPressed: signIn,
-              child: Text('Entrar'),
-            )
-          ],
+        child: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("images/agro.jpg"),
+                  fit: BoxFit.cover)),
+          child: Column(
+            
+            children: <Widget>[
+              Stack(
+                alignment: Alignment.bottomCenter,
+                children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(top: 10, bottom: 10),
+                        child: Image.asset(
+                          "images/agro.jpg",
+                          width: 130,
+                          height: 130,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                      TextFormField(
+                        style: TextStyle(color: Colors.black),
+                        decoration: InputDecoration(
+                          hintStyle: TextStyle(
+                              color: Colors.black,
+                              fontFamily: "WorkSansLight",
+                              fontSize: 15.0),
+                          filled: true,
+                          fillColor: Colors.white24,
+                          hintText: "E-mail",
+                          border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(90.0)),
+                              borderSide: BorderSide(
+                                  color: Colors.white24, width: 0.5)),
+                          prefixIcon: const Icon(
+                            Icons.email,
+                            color: Colors.white,
+                          ),
+                        ),
+                        keyboardType: TextInputType.emailAddress,
+                        // ignore: missing_return
+                        validator: (input) {
+                          if (input.isEmpty) {
+                            return 'Digite um email válido';
+                          }
+                        },
+                        onSaved: (input) => _email = input,
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      TextFormField(
+                        style: TextStyle(color: Colors.black),
+                        decoration: InputDecoration(
+                          hintStyle: TextStyle(
+                              color: Colors.black,
+                              fontFamily: "WorkSansLight",
+                              fontSize: 15.0),
+                          filled: true,
+                          fillColor: Colors.white24,
+                          hintText: "Senha",
+                          border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(90.0)),
+                              borderSide: BorderSide(
+                                  color: Colors.white24, width: 0.5)),
+                          prefixIcon: const Icon(
+                            Icons.lock_outline,
+                            color: Colors.white,
+                          ),
+                        ),
+                        obscureText: true,
+                        // ignore: missing_return
+                        validator: (input) {
+                          if (input.isEmpty) {
+                            return 'Digite sua senha';
+                          }
+                        },
+                        onSaved: (input) => _password = input,
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      SizedBox(
+                        height: 80,
+                        width: 180,
+                        child: new FloatingActionButton(
+                          backgroundColor: Colors.white30,
+                          child: Text(
+                            "Entrar",
+                            style: TextStyle(
+                              fontSize: 18.0,
+                            ),
+                          ),
+                          onPressed: signIn,
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
