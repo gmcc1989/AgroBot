@@ -17,35 +17,38 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.transparent),
+//      appBar: AppBar(backgroundColor: Colors.transparent),
       body: Form(
         key: _formkey,
         child: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("lib/pages/images/agro.jpg"),
-                  fit: BoxFit.cover)),
+                  image: AssetImage("lib/assets/images/agro.jpg"),
+                  fit: BoxFit.cover
+                 )
+              ),
           child: Column(
             children: <Widget>[
               Stack(
                 alignment: Alignment.bottomCenter,
                 children: <Widget>[
                   Column(
+                    
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.only(top: 10, bottom: 10),
+                        padding: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
                         child: Image.asset(
-                          lib/pages/images/agro.jpg,
+                          "lib/assets/images/logotransp.png",
                           width: 130,
                           height: 130,
                           fit: BoxFit.contain,
                         ),
                       ),
                       TextFormField(
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                           hintStyle: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontFamily: "WorkSansLight",
                               fontSize: 15.0),
                           filled: true,
@@ -74,10 +77,10 @@ class _LoginPageState extends State<LoginPage> {
                         height: 20.0,
                       ),
                       TextFormField(
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                           hintStyle: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontFamily: "WorkSansLight",
                               fontSize: 15.0),
                           filled: true,
@@ -103,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                         onSaved: (input) => _password = input,
                       ),
                       SizedBox(
-                        height: 10.0,
+                        height: 20.0,
                       ),
                       SizedBox(
                         height: 80,
