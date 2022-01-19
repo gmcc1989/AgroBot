@@ -1,3 +1,4 @@
+import 'package:agrobotApp/pages/setup/signIn.dart';
 import 'package:agrobotApp/pages/setup/welcome.dart';
 import 'package:flutter/material.dart';
 // Import the firebase_core plugin

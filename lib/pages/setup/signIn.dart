@@ -21,26 +21,30 @@ class _LoginPageState extends State<LoginPage> {
       body: Form(
         key: _formkey,
         child: Container(
+          padding: EdgeInsets.only(left: 15, right: 15),
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("lib/assets/images/agro.jpg"),
-                  fit: BoxFit.cover
-                 )
-              ),
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Colors.blueGrey.shade900,
+                Colors.blueGrey.shade600,
+              ],
+              )),
+              
           child: Column(
             children: <Widget>[
               Stack(
                 alignment: Alignment.bottomCenter,
                 children: <Widget>[
-                  Column(
-                    
+                  Column(                    
                     children: <Widget>[
                       Padding(
                         padding: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
                         child: Image.asset(
                           "lib/assets/images/logotransp.png",
-                          width: 130,
-                          height: 130,
+                          width: 150,
+                          height: 150,
                           fit: BoxFit.contain,
                         ),
                       ),
